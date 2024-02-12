@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+
+li {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+
+}
+ul {
+  padding-left: 0;
+}
+
+.navbar .navbar-toggler {
+  font-size: 25px;
+  border-color: transparent;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
