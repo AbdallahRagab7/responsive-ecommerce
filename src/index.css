@@ -23,6 +23,10 @@ ul {
   font-size: 25px;
   border-color: transparent;
 }
+.navbar .nav-link .navbar-brand {
+  font-family: Roboto;
+
+}
 
 .navbar .navbar-toggler:focus {
   box-shadow: none;

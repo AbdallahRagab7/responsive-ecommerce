@@ -5,11 +5,11 @@ export default function Navbar() {
         <div className="container">
           <div>
             <a className="navbar-brand fw-bold" href="#">
-              Ragab Store
+              RAGAB STORE
             </a>
           </div>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#ay7aga"
@@ -17,7 +17,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
           </button>
 
           <div className="collapse navbar-collapse" id="ay7aga">
@@ -52,7 +52,7 @@ export default function Navbar() {
                 <i className="fa fa-user-plus mr-1"></i> Register
               </a>
               <a className="btn btn-outline-dark m-2">
-                <i className="fa fa-cart-shopping mr-1"></i> Cart
+                <i className="fa fa-cart-shopping mr-1"></i> Cart (0)
               </a>
             </div>
           </div>
