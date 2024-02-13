@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Product from "./Product.jsx";
-function Products() {
+function MyProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -52,4 +52,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default MyProducts;

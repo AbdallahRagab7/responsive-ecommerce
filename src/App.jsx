@@ -3,6 +3,8 @@ import RootLayout from "./pages/RootLayout.jsx";
 import HomePage from "./pages/Home.jsx"
 import ErrorPage from "./pages/Error.jsx"
 import CartPage from './pages/Cart.jsx'
+import ProductsPage from "./pages/ProductsPage.jsx";
+import ProductDetailsPage from "./pages/ProductDetails.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -13,8 +15,10 @@ const router = createBrowserRouter([
     children: [
       { index : true , element: <HomePage /> },
       { path: 'cart', element: <CartPage/> },
-      // { path: 'products/:productId', element: <ProductDetailPage /> }
+      { path: 'products', element: <ProductsPage/> },
+      { path: '/product/:productId', element: <ProductDetailsPage /> }
     ],
+    
   }
 ]);
 

@@ -1,5 +1,5 @@
-import classes from "./Products.module.css";
-
+import classes from "./Product.module.css";
+import { Link } from "react-router-dom";
 function Product({ product, title, first20Words }) {
   return (
     <>
@@ -24,9 +24,9 @@ function Product({ product, title, first20Words }) {
         </ul>
 
         <div className="d-flex justify-content-center mb-2">
-          <a to={"/product/" + product.id} className="btn btn-dark m-1">
+          <Link to={"/product/" + product.id} className="btn btn-dark m-1">
             Buy Now
-          </a>
+          </Link>
           <button
             className="btn btn-dark m-1"
             // onClick={() => addProduct(product)}

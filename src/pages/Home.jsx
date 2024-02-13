@@ -1,10 +1,10 @@
 import HeroSection from "../Components/Home/HeroSection.jsx";
-import Products from "../Components/Home/Products.jsx";
+import MyProducts from "../Components/Home/MyProducts.jsx";
 function Home() {
   return (
     <>
       <HeroSection />
-      <Products />
+      <MyProducts />
     </>
   );
 }
