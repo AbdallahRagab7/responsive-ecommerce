@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import classes from "./Products.module.css";
+import Product from "./Product.jsx";
 function Products() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -26,7 +26,7 @@ function Products() {
         <button className="btn btn-outline-dark btn-sm m-2">Electronics</button>
       </div>
 
-      <div className="">
+      <section>
         <div className="row justify-content-center align-items-center g-5">
           {products.map((product) => {
             const mergeTitle = product.title.split(" ");
@@ -38,42 +38,16 @@ function Products() {
               .join(" ");
 
             return (
-              <div
+              <Product
                 key={product.id}
-                className=" card text-center col-8 col-sm-5 col-md-3 mx-3 "
-              >
-                <div className={`${classes["product-image"]} m-3`}>
-                  <img src={product.image} alt="product-image" />
-                </div>
-
-                <div>
-                  <h4>{title}</h4>
-                  <p className={classes.description}>
-                    {/* {product.description.substring(0, 60)}... */}
-                    {first20Words}
-                  </p>
-                </div>
-
-                <ul className="list-group list-group-flush mb-2">
-                  <li className="list-group-item lead fw-bold">$ {product.price}</li>
-                </ul>
-
-                <div className="d-flex justify-content-center mb-2">
-                  <a to={"/product/" + product.id} className="btn btn-dark m-1">
-                    Buy Now
-                  </a>
-                  <button
-                    className="btn btn-dark m-1"
-                    onClick={() => addProduct(product)}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+                product={product}
+                title={title}
+                first20Words={first20Words}
+              />
             );
           })}
         </div>
-      </div>
+      </section>
     </>
   );
 }
