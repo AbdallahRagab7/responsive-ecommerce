@@ -1,6 +1,22 @@
 import classes from "./Product.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {cartActions} from "../../store/cart-slice"
+
 function Product({ product, title, first20Words }) {
+
+    const dispatch = useDispatch()
+
+    function addItemHandler () {
+      console.log("Added");
+      dispatch(cartActions.addItemToCart(product))
+    }
+  
+  
+    // function removeItemHandler () {
+    //   dispatch(cartActions.removeItemFromCart(item.id))
+    // }
+
   return (
     <>
       <div
@@ -29,6 +45,7 @@ function Product({ product, title, first20Words }) {
           </Link>
           <button
             className="btn btn-dark m-1"
+            onClick={addItemHandler}
             // onClick={() => addProduct(product)}
           >
             Add to Cart
