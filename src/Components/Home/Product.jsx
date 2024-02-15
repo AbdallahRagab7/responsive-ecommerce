@@ -1,21 +1,14 @@
 import classes from "./Product.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {cartActions} from "../../store/cart-slice"
+import { cartActions } from "../../store/cart-slice";
 
 function Product({ product, title, first20Words }) {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
-
-    function addItemHandler () {
-      console.log("Added");
-      dispatch(cartActions.addItemToCart(product))
-    }
-  
-  
-    // function removeItemHandler () {
-    //   dispatch(cartActions.removeItemFromCart(item.id))
-    // }
+  function addItemHandler() {
+    dispatch(cartActions.addItemToCart(product));
+  }
 
   return (
     <>
@@ -39,15 +32,11 @@ function Product({ product, title, first20Words }) {
           <li className="list-group-item lead fw-bold">$ {product.price}</li>
         </ul>
 
-        <div className="d-flex justify-content-center mb-2">
-          <Link to={"/product/" + product.id} className="btn btn-dark m-1">
+        <div className="card-body">
+          <Link to={"/product/" + product.id} className="btn btn-dark m-1 ">
             Buy Now
           </Link>
-          <button
-            className="btn btn-dark m-1"
-            onClick={addItemHandler}
-            // onClick={() => addProduct(product)}
-          >
+          <button className="btn btn-dark m-1 " onClick={addItemHandler}>
             Add to Cart
           </button>
         </div>

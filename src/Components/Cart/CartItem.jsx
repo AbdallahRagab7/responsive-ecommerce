@@ -40,7 +40,7 @@ function cartItem({item}) {
               <p className="mx-5 fw-bold">{item.quantity}</p>
 
               <button
-                className="btn px-3"
+                className="btn px-3 "
               onClick={addItemHandler}
               >
                 <i className="fas fa-plus"></i>
