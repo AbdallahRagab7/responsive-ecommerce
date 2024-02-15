@@ -1,42 +1,23 @@
-import { useState, useEffect } from "react";
-import {useParams } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { cartActions } from "../store/cart-slice";
-import ProductSummary from "../Components/ProductDetails/ProductSummary";
-import SimilarProducts from './../Components/ProductDetails/SimilarProducts';
-function ProductDetails() {
-  const [product, setProductData] = useState([]);
-  const [similarProducts, setSimilarProducts] = useState([]);
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+import { Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 
-  const { productId } = useParams();
+function SimilarProducts({ similarProducts }) {
+  function goToProductPage() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: adds smooth scrolling animation
+    });
+  }
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    async function getProduct() {
-      const response = await fetch(
-        `https://fakestoreapi.com/products/${productId}`
-      );
-      const data = await response.json();
-      setProductData(data);
-
-      const response2 = await fetch(
-        `https://fakestoreapi.com/products/category/${data.category}`
-      );
-      const data2 = await response2.json();
-      setSimilarProducts(data2);
-    }
-    getProduct();
-  }, [productId]);
-
-
-
+  function addItemHandler() {
+    dispatch(cartActions.addItemToCart(product));
+  }
   return (
     <>
-
-      <ProductSummary product={product}/>
-     
-      <h2 className="text-center pt-4 ">You may also Like</h2>
-
-      {/* <div className="container">
+      <div className="container">
         <Marquee pauseOnHover={true} pauseOnClick={true} speed={60}>
           <div className="py-4 my-4">
             <div className="d-flex">
@@ -82,10 +63,9 @@ function ProductDetails() {
             </div>
           </div>
         </Marquee>
-      </div> */}
-      <SimilarProducts similarProducts= {similarProducts}/>
+      </div>
     </>
   );
 }
 
-export default ProductDetails;
+export default SimilarProducts;
