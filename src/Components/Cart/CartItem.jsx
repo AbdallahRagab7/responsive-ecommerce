@@ -4,7 +4,6 @@ import {cartActions} from "../../store/cart-slice"
 function cartItem({item}) {
   const dispatch = useDispatch()
   function addItemHandler () {
-    console.log("Added");
     dispatch(cartActions.addItemToCart(item))
   }
 

@@ -29,8 +29,6 @@ function Cart() {
                   </div>
                 </div>
               </div>
-
-              {/* Checkout */}
               <Checkout />
             </div>
           </div>
