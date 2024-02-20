@@ -46,7 +46,7 @@ const Register = () => {
                     className="text-decoration-underline ms-1"
                   >
                     Login
-                  </Link>{" "}
+                  </Link>
                 </p>
               </div>
 

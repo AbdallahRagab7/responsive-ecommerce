@@ -57,3 +57,63 @@ input {
   color: white !important;
   background-color: rgb(33, 37, 41) !important;
 }
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.pagination-container button {
+  margin: 0 5px;
+  font-size: 1rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: rgb(3, 3, 3);
+  border: 1px solid #5f5959;
+  background-color:transparent;
+  transition: background-color 0.3s ease; 
+  font-weight: 500;
+}
+
+.pagination-container button:hover {
+  background-color: #141614; 
+  color: white;
+}
+
+.pagination-container button.active {
+  background-color: #0e180e; 
+  color: white;
+}
+
+.pagination-container button.active:hover {
+  background-color: #000000; 
+}
+
+.product-card {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

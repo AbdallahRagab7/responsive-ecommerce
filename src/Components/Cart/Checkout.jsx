@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { currencyFormatter } from '../../util/formatting.js';
 
 function Checkout({}) {
   const cartItems = useSelector((state) => state.cart.items);
@@ -23,15 +24,15 @@ function Checkout({}) {
           <ul className="list-group list-group-flush">
             <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 fw-medium">
               {/* Products ({totalItems})<span>${Math.round(subtotal)}</span> */}
-              Products ({totalCartItems})<span> $ {cartTotalPrice}</span>
+              Products ({totalCartItems})<span> {currencyFormatter.format(cartTotalPrice)}</span>
             </li>
             <li className="list-group-item d-flex justify-content-between align-items-center px-0 fw-medium">
               Shipping
-              <span> $ {shippingCost} </span>
+              <span> {currencyFormatter.format(shippingCost)} </span>
             </li>
             <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3 text-dark fw-medium">
               <div>Total amount</div>
-              <span>$ {cartTotalPrice + shippingCost}</span>
+              <span>{currencyFormatter.format(cartTotalPrice + shippingCost)} </span>
             </li>
           </ul>
 

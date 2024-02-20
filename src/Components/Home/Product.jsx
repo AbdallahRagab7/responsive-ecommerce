@@ -14,7 +14,7 @@ function Product({ product, title, first20Words }) {
     <>
       <div
         key={product.id}
-        className=" card text-center col-8 col-sm-5 col-md-3 mx-3 "
+        className=" product-card card text-center col-8 col-sm-5 col-md-3 mx-3 "
       >
         <div className={`${classes["product-image"]} m-3`}>
           <img src={product.image} alt="product-image" />
@@ -29,7 +29,7 @@ function Product({ product, title, first20Words }) {
         </div>
 
         <ul className="list-group list-group-flush mb-2">
-          <li className="list-group-item lead fw-bold">$ {product.price}</li>
+          <li className="list-group-item lead fw-bold">{currencyFormatter.format(product.price)}</li>
         </ul>
 
         <div className="card-body">
