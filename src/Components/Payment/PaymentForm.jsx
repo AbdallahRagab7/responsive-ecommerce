@@ -1,4 +1,4 @@
-import Input from "../Components/UI/Input.jsx";
+import Input from "../UI/Input.jsx";
 
 function PaymentForm() {
   return (

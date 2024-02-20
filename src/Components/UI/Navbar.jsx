@@ -10,12 +10,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
+      <nav className="navbar navbar-expand-lg  py-3 sticky-top">
         <div className="container">
           <div>
-            <NavLink className="navbar-brand fw-bold" href="#">
+            <Link className="navbar-brand fw-bold" href="#">
               RAGAB STORE
-            </NavLink>
+            </Link>
           </div>
           <button
             className="navbar-toggler"
@@ -54,7 +54,7 @@ export default function Navbar() {
             </ul>
 
             <div className="buttons text-center">
-              <Link className="btn btn-outline-dark m-2">
+              <Link to={"/login"} className="btn btn-outline-dark m-2">
                 <i className="fa fa-sign-in-alt mr-1"></i> Login
               </Link>
               <Link className="btn btn-outline-dark m-2">

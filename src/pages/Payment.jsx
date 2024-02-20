@@ -1,5 +1,5 @@
 import Checkout from "../Components/Cart/Checkout";
-import PaymentForm from "../Components/PaymentForm";
+import PaymentForm from "../Components/Payment/PaymentForm";
 function Payment() {
   return (
     <>
