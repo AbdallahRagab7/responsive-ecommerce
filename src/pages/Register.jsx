@@ -1,15 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Input from "../Components/UI/Input.jsx";
-const Login = () => {
+const Register = () => {
   return (
     <>
       <div className="container my-3 py-3">
-        <h1 className="text-center">Login</h1>
+        <h1 className="text-center">Register</h1>
 
         <div class="row my-4 ">
           <div className="col-md-6 col-lg-5 col-sm-8 mx-auto">
             <form class="border p-4  shadow">
+              <Input
+                id="name"
+                label="Full name"
+                type="name"
+                placeholder="Abdallah Ragab"
+              />
+
+              <Input
+                id="mobile"
+                label="Phone Number"
+                type="text"
+                placeholder="0123456789"
+              />
+
+
               <Input
                 id="email"
                 label="Email address"
@@ -25,19 +40,19 @@ const Login = () => {
 
               <div className="my-3 text-center">
                 <p className="fw-medium">
-                  New Here?
+                Already has an account?
                   <Link
-                    to="/register"
+                    to="/login"
                     className="text-decoration-underline ms-1"
                   >
-                    Register
-                  </Link>
+                    Login
+                  </Link>{" "}
                 </p>
               </div>
 
               <div className="text-center">
                 <button class="my-2 btn btn-dark  px-4 fw-bold" type="submit">
-                  Login
+                  Register
                 </button>
               </div>
             </form>
@@ -48,4 +63,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

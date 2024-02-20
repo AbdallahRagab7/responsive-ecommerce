@@ -1,7 +1,7 @@
 function Input({label , id , ...props}) {
   return (
     <>
-      <div className=" my-1">
+      <div className=" my-1 mb-2">
         <label htmlFor={id}  className="form-label"> {label} </label>
         <input
         className="form-control"

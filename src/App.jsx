@@ -7,7 +7,8 @@ import ProductsPage from "./pages/ProductsPage.jsx";
 import ProductDetailsPage from "./pages/ProductDetails.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Payment from './pages/Payment.jsx'
-import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx"
+import Login from "./pages/Login.jsx"
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: '/product/:productId', element: <ProductDetailsPage /> },
       { path: '/payment', element: <Payment/> },
       { path: '/login', element: <Login/> },
+      { path: '/register', element: <Register/> },
     ],
     
   }

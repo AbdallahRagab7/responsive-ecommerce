@@ -57,7 +57,7 @@ export default function Navbar() {
               <Link to={"/login"} className="btn btn-outline-dark m-2">
                 <i className="fa fa-sign-in-alt mr-1"></i> Login
               </Link>
-              <Link className="btn btn-outline-dark m-2">
+              <Link className="btn btn-outline-dark m-2" to={"/register"}>
                 <i className="fa fa-user-plus mr-1"></i> Register
               </Link>
 
