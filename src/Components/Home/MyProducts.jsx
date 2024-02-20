@@ -41,24 +41,26 @@ function MyProducts() {
 
       <section>
         <div className="row justify-content-center align-items-center g-5">
-          {filteredProducts.map((product) => {
-            const mergeTitle = product.title.split(" ");
-            const title = `${mergeTitle[0]}  ${mergeTitle[1]}  ${mergeTitle[2]}`;
+          {filteredProducts
+            .sort(() => Math.random() - 0.5)
+            .map((product) => {
+              const mergeTitle = product.title.split(" ");
+              const title = `${mergeTitle[0]}  ${mergeTitle[1]}  ${mergeTitle[2]}`;
 
-            const first20Words = product.description
-              .split(" ")
-              .slice(0, 10)
-              .join(" ");
+              const first20Words = product.description
+                .split(" ")
+                .slice(0, 10)
+                .join(" ");
 
-            return (
-              <Product
-                key={product.id}
-                product={product}
-                title={title}
-                first20Words={first20Words}
-              />
-            );
-          })}
+              return (
+                <Product
+                  key={product.id}
+                  product={product}
+                  title={title}
+                  first20Words={first20Words}
+                />
+              );
+            })}
         </div>
       </section>
     </>
