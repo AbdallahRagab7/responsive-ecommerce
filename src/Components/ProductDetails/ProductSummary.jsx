@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export default function ProductSummary ({ product }) {
-    console.log(product);
+    // console.log(product);
   const dispatch = useDispatch();
 
   function addItemHandler() {

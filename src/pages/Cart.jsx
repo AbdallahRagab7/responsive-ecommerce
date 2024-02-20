@@ -29,7 +29,10 @@ function Cart() {
                   </div>
                 </div>
               </div>
-              <Checkout />
+              
+              <div className="col-md-4">
+                <Checkout />
+              </div>
             </div>
           </div>
         </section>

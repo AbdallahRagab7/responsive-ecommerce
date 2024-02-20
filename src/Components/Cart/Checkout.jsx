@@ -14,7 +14,7 @@ function Checkout({}) {
 
   return (
     <>
-      <div className="col-md-4">
+      {/* <div className="col-md-4"> */}
         <div className="card mb-4">
           <div className="card-header py-3 bg-light">
             <h5 className="mb-0">Order Summary</h5>
@@ -39,12 +39,12 @@ function Checkout({}) {
               </li>
             </ul>
 
-            <Link to="/checkout" className="btn btn-dark btn-lg btn-block">
+            <Link to="/payment" className="btn btn-dark btn-lg btn-block">
               Go to checkout
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
