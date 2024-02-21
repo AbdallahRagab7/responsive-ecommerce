@@ -25,7 +25,8 @@ ul {
   color: black;
   font-weight: 500;
 }
-.navbar ul a:hover , .navbar .navbar-brand:hover {
+.navbar ul a:hover,
+.navbar .navbar-brand:hover {
   color: rgb(107, 124, 223);
 }
 
@@ -55,7 +56,7 @@ input {
 
 .activeCategoryBtn {
   color: white !important;
-  background-color: rgb(33, 37, 41) !important;
+  background-color: rgb(13, 110, 253) !important;
 }
 .pagination-container {
   display: flex;
@@ -71,28 +72,50 @@ input {
   cursor: pointer;
   color: rgb(3, 3, 3);
   border: 1px solid #5f5959;
-  background-color:transparent;
-  transition: background-color 0.3s ease; 
+  background-color: transparent;
+  transition: background-color 0.3s ease;
   font-weight: 500;
+  border-radius: 10px;
 }
 
 .pagination-container button:hover {
-  background-color: #141614; 
+  background-color: rgb(13, 110, 253);
   color: white;
 }
 
 .pagination-container button.active {
-  background-color: #0e180e; 
+  background-color: rgb(13, 110, 253);
   color: white;
 }
-
+/* 
 .pagination-container button.active:hover {
-  background-color: #000000; 
-}
+  background-color: #000000;
+} */
 
 .product-card {
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
+}
+.navbar svg {
+  width: 32px;
+  height: 35px;
+  color: #070707;
+  margin-top: -2px;
+}
+.totalCartItems {
+  color: rgb(26, 15, 121);
+  font-weight: 600;
+  margin-left: -1.4rem;
+  font-size: 1.2rem;
+  vertical-align: -0.4rem;
+}
+
+.cart-svg {
+  margin-top: -50px;
+  margin-left:.5rem;
+}
+.navbar > .container {
+  justify-content: space-between !important;
 }
 
 @keyframes fadeIn {
@@ -104,8 +127,6 @@ input {
   }
 }
 
-
-
 @keyframes fade-slide-up {
   from {
     opacity: 0;
@@ -115,5 +136,16 @@ input {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 299px) {
+  .product-item-buttons button {
+    padding: 0 !important;
+  }
+
+  .add-to-cart {
+    width: 89px;
+    height: 38px;
   }
 }

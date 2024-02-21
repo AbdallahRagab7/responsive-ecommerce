@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import Product from "./Product.jsx";
+import Product from "./ProductItem.jsx";
 import FilterProducts from "./FilterProducts.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function MyProducts() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -118,6 +120,18 @@ function MyProducts() {
           </button>
         </div>
       </section>
+
+      <ToastContainer
+        position="top-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

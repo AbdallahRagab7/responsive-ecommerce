@@ -2,18 +2,22 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import { ToastContainer, toast } from "react-toastify";
 
 function SimilarProducts({ similarProducts }) {
+console.log(similarProducts);
   function goToProductPage() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Optional: adds smooth scrolling animation
+      behavior: "smooth", 
     });
   }
   const dispatch = useDispatch();
 
-  function addItemHandler() {
-    dispatch(cartActions.addItemToCart(product));
+  function addItemHandler(item) {
+    dispatch(cartActions.addItemToCart(item));
+    toast.success(`${item.title.split(" ").slice(0, 3).join(" ")} added to cart!`)
+
   }
   return (
     <>
@@ -23,7 +27,7 @@ function SimilarProducts({ similarProducts }) {
             <div className="d-flex">
               {similarProducts.map((item) => {
                 return (
-                  <div key={item.id} className="card mx-4 text-center">
+                  <div key={item.id} className="card mx-4 text-center shadow">
                     <img
                       className="card-img-top p-3"
                       src={item.image}
@@ -44,15 +48,15 @@ function SimilarProducts({ similarProducts }) {
                       >
                         <Link
                           to={"/product/" + item.id}
-                          className="btn btn-dark m-1"
+                          className="btn btn-outline-primary m-1"
                         >
                           Buy Now
                         </Link>
                       </button>
 
                       <button
-                        className="btn btn-dark m-1"
-                        onClick={addItemHandler}
+                        className="btn btn-outline-primary m-1"
+                        onClick={()=> {addItemHandler(item)}}
                       >
                         Add to Cart
                       </button>
@@ -64,6 +68,17 @@ function SimilarProducts({ similarProducts }) {
           </div>
         </Marquee>
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

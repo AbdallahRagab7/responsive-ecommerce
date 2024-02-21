@@ -4,7 +4,7 @@ function filterProducts({selectedCategory,filterProducts}) {
     <>
       <div className="buttons text-center py-3 mb-2">
         <button
-          className={`btn btn-outline-dark btn-sm m-2 ${
+          className={`btn btn-outline-primary  fw-medium btn-sm m-2  ${
             selectedCategory === "all" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("all")}
@@ -12,7 +12,7 @@ function filterProducts({selectedCategory,filterProducts}) {
           All
         </button>
         <button
-          className={`btn btn-outline-dark btn-sm m-2 ${
+          className={`btn btn-outline-primary fw-medium btn-sm m-2 ${
             selectedCategory === "men's clothing" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("men's clothing")}
@@ -21,7 +21,7 @@ function filterProducts({selectedCategory,filterProducts}) {
         </button>
 
         <button
-          className={`btn btn-outline-dark btn-sm m-2 ${
+          className={`btn btn-outline-primary fw-medium btn-sm m-2 ${
             selectedCategory === "women's clothing" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("women's clothing")}
@@ -30,7 +30,7 @@ function filterProducts({selectedCategory,filterProducts}) {
         </button>
 
         <button
-          className={`btn btn-outline-dark btn-sm m-2 ${
+          className={`btn btn-outline-primary fw-mediumbtn-sm m-2 ${
             selectedCategory === "jewelery" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("jewelery")}
@@ -39,7 +39,7 @@ function filterProducts({selectedCategory,filterProducts}) {
         </button>
 
         <button
-          className={`btn btn-outline-dark btn-sm m-2 ${
+          className={`btn btn-outline-primary fw-medium btn-sm m-2 ${
             selectedCategory === "electronics" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("electronics")}

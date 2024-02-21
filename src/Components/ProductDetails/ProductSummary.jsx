@@ -1,14 +1,18 @@
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
-
-export default function ProductSummary ({ product }) {
-    // console.log(product);
+export default function ProductSummary({ product }) {
+  // console.log(product);
   const dispatch = useDispatch();
 
   function addItemHandler() {
     dispatch(cartActions.addItemToCart(product));
+    toast.success(
+      `${product.title.split(" ").slice(0, 3).join(" ")} added to cart!`
+    );
   }
 
   return (
@@ -33,15 +37,29 @@ export default function ProductSummary ({ product }) {
             </p>
             <h3 className="  my-4">${product.price}</h3>
             <p className="lead">{product.description}</p>
-            <button className="btn btn-outline-dark" onClick={addItemHandler}>
+            <button
+              className="btn btn-outline-primary "
+              onClick={addItemHandler}
+            >
               Add to Cart
             </button>
-            <Link to="/cart" className="btn btn-dark mx-3">
+            <Link to="/cart" className="btn btn-outline-primary mx-3">
               Go to Cart
             </Link>
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }
