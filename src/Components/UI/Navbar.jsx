@@ -13,7 +13,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg  py-3 sticky-top">
         <div className="container">
           <div>
-            <Link className="navbar-brand fw-bold" href="#">
+            <Link className="navbar-brand fw-bold" to="/">
               RAGAB STORE
             </Link>
           </div>
@@ -61,11 +61,11 @@ export default function Navbar() {
                   About
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
                   Contact
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
 
             <div className="buttons text-center">
