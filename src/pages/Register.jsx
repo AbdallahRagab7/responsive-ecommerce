@@ -51,7 +51,7 @@ const Register = () => {
               </div>
 
               <div className="text-center">
-                <button class="my-2 btn btn-dark  px-4 fw-bold" type="submit">
+                <button class="my-2 btn btn-dark  px-4 fw-bold" type="button">
                   Register
                 </button>
               </div>

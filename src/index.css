@@ -43,7 +43,7 @@ ul {
 }
 
 .navbar .navbar-brand {
-  font-family: Roboto;
+  font-family: Raleway;
   color: black;
 }
 
@@ -88,11 +88,15 @@ input {
   color: white;
 }
 
-
-.product-card {
+.product-card , .product-details , .product-text {
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
+  font-family: "Roboto" !important;
 }
+.product-price {
+  font-family: "Roboto";
+}
+
 .navbar svg {
   width: 32px;
   height: 35px;
@@ -114,7 +118,6 @@ input {
 .navbar > .container {
   justify-content: space-between !important;
 }
-
 
 @keyframes fadeIn {
   from {
@@ -147,6 +150,3 @@ input {
     height: 38px;
   }
 }
-
-
-

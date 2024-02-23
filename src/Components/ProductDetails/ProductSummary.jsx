@@ -19,7 +19,7 @@ export default function ProductSummary({ product }) {
     <>
       <div className="container my-5 px-4">
         <div className="row">
-          <div className="col-md-6 col-sm-12 py-3">
+          <div className="col-md-6 col-sm-12 py-3 product-details">
             <img
               className="img-fluid"
               src={product.image}
@@ -28,15 +28,15 @@ export default function ProductSummary({ product }) {
               height="350px"
             />
           </div>
-          <div className="col-md-6 col-md-6 py-5">
-            <h4 className="text-uppercase text-muted">{product.category}</h4>
-            <h1 className="display-5">{product.title}</h1>
+          <div className="col-md-6 col-md-6 py-5 product-text">
+            <h4 className="text-uppercase text-muted fw-bold">{product.category}</h4>
+            <h1 >{product.title}</h1>
             <p className="lead fw-bold text-warning">
               {product.rating && product.rating.rate}{" "}
               <i className="fa fa-star"></i>
             </p>
             <h3 className="  my-4">${product.price}</h3>
-            <p className="lead">{product.description}</p>
+            <p className="lead text-muted mb-4">{product.description}</p>
             <button
               className="btn btn-outline-primary "
               onClick={addItemHandler}

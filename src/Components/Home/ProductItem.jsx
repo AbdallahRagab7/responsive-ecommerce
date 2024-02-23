@@ -35,7 +35,7 @@ function Product({ product, title, first20Words }) {
         </div>
 
         <ul className="list-group list-group-flush mb-2">
-          <li className="list-group-item lead fw-bold">
+          <li className="list-group-item lead fw-bold product-price ">
             {currencyFormatter.format(product.price)}
           </li>
         </ul>

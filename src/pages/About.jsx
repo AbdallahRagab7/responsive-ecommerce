@@ -7,7 +7,10 @@ const About = () => {
       <div className="container  my-3 py-3">
         <h1 className="text-center">About Us</h1>
         <hr />
-        <p className="lead w-75 mx-auto text-center">
+        <p
+          className="lead w-75 mx-auto text-center text-muted"
+          style={{ fontFamily: " Roboto" }}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
           facere doloremque veritatis odit similique sequi. Odit amet fuga nam
           quam quasi facilis sed doloremque saepe sint perspiciatis explicabo
@@ -25,11 +28,11 @@ const About = () => {
         <h2 className="text-center py-4">Our Products</h2>
 
         <div className="row">
-            {categories.map((category) => (
-              <Category category={category} />
-            ))}
-          </div>
+          {categories.map((category) => (
+            <Category category={category} />
+          ))}
         </div>
+      </div>
     </>
   );
 };

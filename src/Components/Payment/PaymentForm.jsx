@@ -47,7 +47,7 @@ function PaymentForm() {
 
             <button
               className="w-100 btn btn-primary rounded-pill fw-bold p-3 mt-5"
-              type="submit"
+              type="button"
             >
               Continue to checkout
             </button>
