@@ -30,7 +30,7 @@ function filterProducts({selectedCategory,filterProducts}) {
         </button>
 
         <button
-          className={`btn btn-outline-primary fw-mediumbtn-sm m-2 ${
+          className={`btn btn-outline-primary fw-medium btn-sm m-2 ${
             selectedCategory === "jewelery" ? "activeCategoryBtn" : ""
           } `}
           onClick={() => filterProducts("jewelery")}
