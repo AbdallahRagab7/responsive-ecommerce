@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg  py-3 sticky-top">
         <div className="container">
           <div>
-            <Link className="navbar-brand fw-bold" to="/">
+            <Link className="navbar-brand fw-bold " to="/">
               RAGAB STORE
             </Link>
           </div>

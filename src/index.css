@@ -53,6 +53,10 @@ label {
 input {
   font-weight: bold;
 }
+button {
+  font-family: system-ui !important;
+  font-weight: 500 !important;
+}
 
 .activeCategoryBtn {
   color: white !important;
@@ -78,21 +82,21 @@ input {
   border-radius: 10px;
 }
 
-.pagination-container button:hover {
-  background-color: rgb(13, 110, 253);
-  color: white;
-}
-
+.pagination-container button:hover,
 .pagination-container button.active {
   background-color: rgb(13, 110, 253);
   color: white;
 }
 
-.product-card , .product-details , .product-text {
+.product-card,
+.product-details,
+.product-text,
+.hero-img {
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
   font-family: "Roboto" !important;
 }
+
 .product-price {
   font-family: "Roboto";
 }
