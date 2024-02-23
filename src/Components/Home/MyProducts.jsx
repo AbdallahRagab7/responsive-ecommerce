@@ -16,7 +16,7 @@ function MyProducts() {
     filteredProducts,
     setFilteredProducts,
   } = useHttp("https://fakestoreapi.com/products", requestConfig, []);
-  
+
   function filterProducts(category) {
     if (category === "all") {
       console.log(category);
@@ -76,7 +76,13 @@ function MyProducts() {
   );
 
   if (isLoading) {
-    return <h3 className="text-center">Fetching Products...</h3>;
+    return (
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {

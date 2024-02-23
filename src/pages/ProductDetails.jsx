@@ -48,7 +48,13 @@ function ProductDetails() {
   }, [productId]);
 
   if (isLoading) {
-    return <h3 className="text-center">Fetching Product...</h3>;
+    return (
+      <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    );
   }
 
   if (error) {
