@@ -115,6 +115,7 @@ input {
   justify-content: space-between !important;
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -146,12 +147,6 @@ input {
     height: 38px;
   }
 }
-@media (max-width: 768px) {
-  .similar-card {
-    width: 8%;
-  }
-  .similar-card img {
-    width: 45%;
-    height: 45%;
-  }
-}
+
+
+

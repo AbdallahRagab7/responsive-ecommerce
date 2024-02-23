@@ -1,7 +1,13 @@
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isNavbarOpen, setNavbarOpen] = useState(false);
+
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
   const cartItems = useSelector((state) => state.cart.items);
 
   const totalCartItems = cartItems.reduce((totalNumberOfItems, item) => {
@@ -18,7 +24,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="toggler-cart d-flex align-items-center justify-content-between">
-            <Link to="cart"  className="d-lg-none">
+            <Link to="cart" className="d-lg-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -35,49 +41,65 @@ export default function Navbar() {
               className="navbar-toggler ms-2"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#ay7aga"
-              aria-controls="ay7aga"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={() => setNavbarOpen(!isNavbarOpen)}
             >
               <i className="fa-solid fa-bars"></i>
             </button>
           </div>
 
-          <div className="collapse navbar-collapse" id="ay7aga">
+          {/* <div
+            className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
+            id="navbarSupportedContent"
+          > */}
+          <div
+            className={`collapse navbar-collapse ${
+              isNavbarOpen ? "show" : ""
+            } ${isNavbarOpen ? "collapsing" : ""}`}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav m-auto my-2 text-center">
               <li className="nav-item mx-2">
-                <NavLink to="/" className="nav-link " aria-current="page">
+                <NavLink
+                  to="/"
+                  className="nav-link "
+                  aria-current="page"
+                  onClick={closeNavbar}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item  mx-2">
-                <NavLink to="/products" className="nav-link">
+                <NavLink
+                  to="/products"
+                  className="nav-link"
+                  onClick={closeNavbar}
+                >
                   Products
                 </NavLink>
               </li>
               <li className="nav-item  mx-2">
-                <NavLink to="/about" className="nav-link">
+                <NavLink to="/about" className="nav-link" onClick={closeNavbar}>
                   About
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
-                </NavLink>
-              </li> */}
             </ul>
 
             <div className="buttons text-center">
               <Link
                 to={"/login"}
                 className="btn btn-outline-primary rounded-pill m-2"
+                onClick={closeNavbar}
               >
                 <i className="fa fa-sign-in-alt mr-1"></i> Login
               </Link>
               <Link
                 className="btn btn-primary rounded-pill me-2"
                 to={"/register"}
+                onClick={closeNavbar}
               >
                 <i className="fa fa-user-plus mr-1"></i> Register
               </Link>

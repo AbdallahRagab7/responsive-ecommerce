@@ -3,21 +3,20 @@ import Product from "./ProductItem.jsx";
 import FilterProducts from "./FilterProducts.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useHttp from "../../hooks/useHttp.js";
+
+const requestConfig = {};
 function MyProducts() {
-  const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  useEffect(() => {
-    async function getProducts() {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data = await response.json();
-      setProducts(data);
-      setFilteredProducts(data);
-    }
-    getProducts();
-  }, []);
-
+  const {
+    data: products,
+    isLoading,
+    error,
+    filteredProducts,
+    setFilteredProducts,
+  } = useHttp("https://fakestoreapi.com/products", requestConfig, []);
+  
   function filterProducts(category) {
     if (category === "all") {
       console.log(category);
@@ -75,6 +74,19 @@ function MyProducts() {
     indexOfFirstMeal,
     indexOfLastMeal
   );
+
+  if (isLoading) {
+    return <h3 className="text-center">Fetching Products...</h3>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center">
+        <h1>Not Found</h1>
+        <h2>{error}</h2>
+      </div>
+    );
+  }
 
   return (
     <>
