@@ -43,11 +43,11 @@ function Product({ product, title, first20Words }) {
         <div className="product-item-buttons py-3 d-flex justify-content-evenly align-items-center">
           <Link
             to={"/product/" + product.id}
-            className="btn btn-outline-primary "
+            className="btn btn-outline-primary buy-now"
           >
             Buy Now
           </Link>
-          <button
+          <button 
             className="btn btn-outline-primary add-to-cart "
             onClick={addItemHandler}
           >

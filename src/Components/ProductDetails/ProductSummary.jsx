@@ -43,7 +43,7 @@ export default function ProductSummary({ product }) {
             >
               Add to Cart
             </button>
-            <Link to="/cart" className="btn btn-outline-primary mx-3">
+            <Link to="/cart" className="btn btn-outline-primary mx-3 buy-now">
               Go to Cart
             </Link>
           </div>

@@ -56,7 +56,7 @@ function SimilarProducts({ similarProducts }) {
                       >
                         <Link
                           to={"/product/" + item.id}
-                          className="btn btn-outline-primary m-1"
+                          className="btn btn-outline-primary m-1 buy-now"
                         >
                           Buy Now
                         </Link>

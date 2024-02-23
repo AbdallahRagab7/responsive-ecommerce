@@ -53,7 +53,8 @@ label {
 input {
   font-weight: bold;
 }
-button {
+button,
+.buy-now {
   font-family: system-ui !important;
   font-weight: 500 !important;
 }
