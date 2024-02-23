@@ -87,10 +87,7 @@ input {
   background-color: rgb(13, 110, 253);
   color: white;
 }
-/* 
-.pagination-container button.active:hover {
-  background-color: #000000;
-} */
+
 
 .product-card {
   opacity: 0;
@@ -112,7 +109,7 @@ input {
 
 .cart-svg {
   margin-top: -50px;
-  margin-left:.5rem;
+  margin-left: 0.5rem;
 }
 .navbar > .container {
   justify-content: space-between !important;
@@ -147,5 +144,14 @@ input {
   .add-to-cart {
     width: 89px;
     height: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .similar-card {
+    width: 8%;
+  }
+  .similar-card img {
+    width: 45%;
+    height: 45%;
   }
 }

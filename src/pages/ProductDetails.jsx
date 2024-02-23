@@ -30,7 +30,7 @@ function ProductDetails() {
     <>
       <ProductSummary product={product} />
 
-      <h2 className="text-center pt-4 ">You may also Like</h2>
+      <h2 className="text-center pt-4 mb-4 ">You may also Like</h2>
 
       <SimilarProducts similarProducts={similarProducts} />
     </>
