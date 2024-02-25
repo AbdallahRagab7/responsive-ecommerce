@@ -145,20 +145,23 @@ button,
   }
 }
 
-@media (max-width: 299px) {
+@media (max-width: 330px) {
   .product-item-buttons button {
-    padding: 0 !important;
+    padding: 0px !important;
   }
 
-  .add-to-cart, .buy-now {
-    display: flex;
-    align-items: center !important;
+  .add-to-cart,
+  .buy-now {
     font-size: 10px;
-    width: 60x;
     height: 30px;
     padding: 0 !important;
   }
-  .buy-now {
-      
+  /* .buy-now {
+  } */
+}
+
+@media (min-width: 768px) {
+  .mynavbar{
+    position: static !important;
   }
 }

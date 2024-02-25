@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg  py-3 sticky-top">
+      <nav className="navbar navbar-expand-lg  sticky-top  py-3  mynavbar">
         <div className="container">
           <div>
             <Link className="navbar-brand fw-bold " to="/">
