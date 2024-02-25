@@ -16,6 +16,10 @@ Responsive React e-commerce app seamlessly integrates with a dummy JSON API, pro
 
 - **Lean Components with Custom Hooks for HTTP Requests**: Utilizing custom hooks for HTTP requests streamlines components, keeping them lean and focused on specific functionalities.
 
+## Desktop View
+https://github.com/AbdallahRagab7/responsive-ecommerce/assets/91810306/8f23f99a-f812-4dc6-a4f8-165d53fc5674
+
+
 
 ## Mobile View
 https://github.com/AbdallahRagab7/responsive-ecommerce/assets/91810306/e5ef1f92-0b04-41c7-a4f1-96da1cf89724
