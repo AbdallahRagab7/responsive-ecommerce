@@ -19,7 +19,7 @@ Responsive React e-commerce app seamlessly integrates with a dummy JSON API, pro
 
 ## Website link <a name = "link"></a>
 
-- Vercel Hosting: e-commerce-virid-one.vercel.app
+- Vercel Hosting: [e-commerce-virid-one.vercel.app](https://e-commerce-virid-one.vercel.app/)
 
 ### Project setup <a name = "Project-setup"></a>
 - npm install
