@@ -150,8 +150,15 @@ button,
     padding: 0 !important;
   }
 
-  .add-to-cart {
-    width: 89px;
-    height: 38px;
+  .add-to-cart, .buy-now {
+    display: flex;
+    align-items: center !important;
+    font-size: 10px;
+    width: 60x;
+    height: 30px;
+    padding: 0 !important;
+  }
+  .buy-now {
+      
   }
 }

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { currencyFormatter } from "../../util/formatting";
 import { toast } from "react-toastify";
+
 function Product({ product, title, first20Words }) {
   const dispatch = useDispatch();
 
@@ -27,7 +28,7 @@ function Product({ product, title, first20Words }) {
         </div>
 
         <div>
-          <h4 className="fw-bold">{title}</h4>
+          <h5 className="fw-bold ">{title}</h5>
           <p className={classes.description}>
             {/* {product.description.substring(0, 60)}... */}
             {first20Words}

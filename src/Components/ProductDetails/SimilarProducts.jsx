@@ -2,11 +2,11 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { ToastContainer, toast } from "react-toastify";
-import classes from "./SimilarProducts.module.css"
+import { toast } from "react-toastify";
+import classes from "./SimilarProducts.module.css";
+import { ToastContainer } from "react-toastify";
 
 function SimilarProducts({ similarProducts }) {
-  // console.log(similarProducts);
   function goToProductPage() {
     window.scrollTo({
       top: 0,
@@ -18,11 +18,22 @@ function SimilarProducts({ similarProducts }) {
   function addItemHandler(item) {
     dispatch(cartActions.addItemToCart(item));
     toast.success(
-      `${product.title.split(" ").slice(0, 3).join(" ")} added to cart!`
+      `${item.title.split(" ").slice(0, 3).join(" ")} added to cart!`
     );
   }
   return (
     <>
+      <ToastContainer
+        position="top-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="container mb-5">
         <Marquee pauseOnHover={true} pauseOnClick={true} speed={40}>
           <div className="">
@@ -34,13 +45,12 @@ function SimilarProducts({ similarProducts }) {
                     className=" mx-4 text-center similar-card shadow "
                   >
                     <div className={`${classes["similar-product-image"]} m-3`}>
-                    <Link to={"/product/" + item.id}>
-                      <img
-                        className="card-img-top p-3"
-                        src={item.image}
-                        alt="Card"
-              
-                      />
+                      <Link to={"/product/" + item.id}>
+                        <img
+                          className="card-img-top p-3"
+                          src={item.image}
+                          alt="Card"
+                        />
                       </Link>
                     </div>
                     <div className="card-body mb-3">
@@ -78,17 +88,6 @@ function SimilarProducts({ similarProducts }) {
           </div>
         </Marquee>
       </div>
-      <ToastContainer
-        position="top-left"
-        autoClose={1500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </>
   );
 }

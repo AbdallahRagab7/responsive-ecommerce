@@ -16,7 +16,7 @@ function MyProducts() {
     filteredProducts,
     setFilteredProducts,
   } = useHttp("https://fakestoreapi.com/products", requestConfig, []);
-  
+
   function filterProducts(category) {
     if (category === "all") {
       setFilteredProducts(products);
@@ -29,7 +29,7 @@ function MyProducts() {
     );
     setFilteredProducts(filteredData);
     setSelectedCategory(category);
-    setCurrentPage(1)
+    setCurrentPage(1);
   }
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,17 +70,16 @@ function MyProducts() {
 
   const indexOfLastMeal = currentPage * itemsPerPage;
   const indexOfFirstMeal = indexOfLastMeal - itemsPerPage;
-  const myProducts = filteredProducts.slice(
-    indexOfFirstMeal,
-    indexOfLastMeal
-  );
+  const myProducts = filteredProducts.slice(indexOfFirstMeal, indexOfLastMeal);
 
   if (isLoading) {
-    return <div className="d-flex justify-content-center" >
-    <div className="spinner-border" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
-  </div>;
+    return (
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
@@ -101,7 +100,7 @@ function MyProducts() {
       />
 
       <section>
-        <div className="row justify-content-center align-items-center g-5">
+        <div className="row justify-content-center align-items-center g-5 me-0 ">
           {myProducts
             .sort(() => Math.random() - 0.5)
             .map((product) => {
@@ -135,9 +134,8 @@ function MyProducts() {
             Next
           </button>
         </div>
-      </section>
 
-      <ToastContainer
+        <ToastContainer
         position="top-left"
         autoClose={1500}
         hideProgressBar={false}
@@ -148,6 +146,9 @@ function MyProducts() {
         draggable
         pauseOnHover
       />
+      </section>
+
+
     </>
   );
 }

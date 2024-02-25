@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductSummary from "../Components/ProductDetails/ProductSummary";
 import SimilarProducts from "./../Components/ProductDetails/SimilarProducts";
+// import { ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
 
 function ProductDetails() {
   const [product, setProductData] = useState([]);
@@ -72,6 +75,18 @@ function ProductDetails() {
       <h2 className="text-center pt-4 mb-4 ">You may also Like</h2>
 
       <SimilarProducts similarProducts={similarProducts} />
+
+      {/* <ToastContainer
+        position="top-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      /> */}
     </>
   );
 }
