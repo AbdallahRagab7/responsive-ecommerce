@@ -7,7 +7,7 @@ Responsive React e-commerce app seamlessly integrates with a dummy JSON API, pro
 - Quantity Control: Easily increase or decrease the quantity of specific meals, ensuring flexibility in your order.
 
 - Effortless Checkout: Streamline the ordering process by filling out a simple form to complete your purchase.
-- 
+
 - Register and Login Pages: The app includes secure user authentication features, offering login and register pages to ensure a personalized and secure shopping environment.
   
 - **Fetch Products Using API:** The app fetches product data from an external API, providing a wide range of products for users to explore.
@@ -16,6 +16,10 @@ Responsive React e-commerce app seamlessly integrates with a dummy JSON API, pro
 
 - **Lean Components with Custom Hooks for HTTP Requests: Utilizing custom hooks for HTTP requests streamlines components, keeping them lean and focused on specific functionalities.
 
+
+## Website link <a name = "link"></a>
+
+- Vercel Hosting: e-commerce-virid-one.vercel.app
 
 ### Project setup <a name = "Project-setup"></a>
 - npm install
