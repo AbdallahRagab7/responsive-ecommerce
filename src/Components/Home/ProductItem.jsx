@@ -27,7 +27,7 @@ function Product({ product, title, first20Words }) {
         </div>
 
         <div>
-          <h4>{title}</h4>
+          <h4 className="fw-bold">{title}</h4>
           <p className={classes.description}>
             {/* {product.description.substring(0, 60)}... */}
             {first20Words}

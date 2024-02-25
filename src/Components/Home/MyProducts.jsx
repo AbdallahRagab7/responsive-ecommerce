@@ -19,7 +19,6 @@ function MyProducts() {
   
   function filterProducts(category) {
     if (category === "all") {
-      console.log(category);
       setFilteredProducts(products);
       setSelectedCategory(category);
       return;
@@ -30,6 +29,7 @@ function MyProducts() {
     );
     setFilteredProducts(filteredData);
     setSelectedCategory(category);
+    setCurrentPage(1)
   }
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,7 +70,7 @@ function MyProducts() {
 
   const indexOfLastMeal = currentPage * itemsPerPage;
   const indexOfFirstMeal = indexOfLastMeal - itemsPerPage;
-  const currentMeals = filteredProducts.slice(
+  const myProducts = filteredProducts.slice(
     indexOfFirstMeal,
     indexOfLastMeal
   );
@@ -102,7 +102,7 @@ function MyProducts() {
 
       <section>
         <div className="row justify-content-center align-items-center g-5">
-          {currentMeals
+          {myProducts
             .sort(() => Math.random() - 0.5)
             .map((product) => {
               const mergeTitle = product.title.split(" ");

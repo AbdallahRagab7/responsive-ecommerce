@@ -44,7 +44,7 @@ function SimilarProducts({ similarProducts }) {
                       </Link>
                     </div>
                     <div className="card-body mb-3">
-                      <h5 className="card-title">
+                      <h5 className="card-title fw-bold">
                         {item.title.substring(0, 15)}...
                       </h5>
                     </div>
