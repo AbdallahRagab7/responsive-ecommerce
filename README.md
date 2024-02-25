@@ -17,8 +17,13 @@ Responsive React e-commerce app seamlessly integrates with a dummy JSON API, pro
 - **Lean Components with Custom Hooks for HTTP Requests**: Utilizing custom hooks for HTTP requests streamlines components, keeping them lean and focused on specific functionalities.
 
 
-## Website link <a name = "link"></a>
+## Mobile View
+https://github.com/AbdallahRagab7/responsive-ecommerce/assets/91810306/e5ef1f92-0b04-41c7-a4f1-96da1cf89724
 
+
+
+
+## Website link <a name = "link"></a>
 - Vercel Hosting: [e-commerce-virid-one.vercel.app](https://e-commerce-virid-one.vercel.app/)
 
 ### Project setup <a name = "Project-setup"></a>
