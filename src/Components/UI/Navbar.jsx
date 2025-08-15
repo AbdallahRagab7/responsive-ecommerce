@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="container">
           <div>
             <Link className="navbar-brand fw-bold " to="/">
-              RAGAB STORE
+              ShopEase
             </Link>
           </div>
           <div className="toggler-cart d-flex align-items-center justify-content-between">
